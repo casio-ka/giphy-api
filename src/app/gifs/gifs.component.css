@@ -1,8 +1,8 @@
 .gifs {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    width: 100px;
-    margin: 0px auto;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .gif img {
