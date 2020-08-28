@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -15,7 +14,10 @@ export class SearchComponent implements OnInit {
   }
   search(searchTerm: string) {
     if(searchTerm !== '') {
-      this.dataService.searchGifs(searchTerm);
+      this.dataService.searchGifs(searchTerm)
+      .subscribe((response:any) => {
+        console.log('Search Data', response);
+      });
 
   }
 }
